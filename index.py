@@ -2,6 +2,7 @@ import json
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
+from services import DrQA, process
 
 @app.route("/")
 def index():
@@ -10,7 +11,5 @@ def index():
 @app.route("/query", methods=["POST"])
 def query():
     data = request.json
-    response = {
-        'answer': data.get('question', '') + '?'
-    }
-    return json.dumps(response)
+    answers = process(question=data['question'])
+    return json.dumps(answers)

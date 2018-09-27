@@ -41,10 +41,19 @@
             question: this.messageToSend.trim()
           }),
           dataType: 'json'
-        }).done(function(resp) {
+        }).done(function(answers) {
+          console.log(answers)
+          if (answers.length == 0) {
+            return
+          }
           var templateResponse = Handlebars.compile($("#message-response-template").html());
+          response = '<strong>' + answers[0]['span'] + 
+              '</strong> from <a href="https://en.wikipedia.org/wiki/' +
+              answers[0]['doc_id'] + '">' + answers[0]['doc_id'] + '</a>';
           var contextResponse = {
-            response: resp.answer,
+            answer: answers[0]['span'],
+            doc_id: answers[0]['doc_id'],
+            context: answers[0]['text'],
             time: instance.getCurrentTime()
           };
           instance.$chatHistoryList.append(templateResponse(contextResponse));

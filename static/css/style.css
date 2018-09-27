@@ -114,6 +114,20 @@ body {
   color: #a8aab1;
   padding-left: 6px;
 }
+
+.chat .chat-history .message-data-answer {
+  font-weight: bold;
+}
+
+.chat .chat-history .message-data-context {
+  font-style: italic;
+  padding-bottom: 18px;
+}
+
+.chat .chat-history .message-data-link {
+  float: right;
+}
+
 .chat .chat-history .message {
   color: white;
   padding: 18px 20px;
@@ -124,6 +138,8 @@ body {
   width: 90%;
   position: relative;
 }
+
+
 .chat .chat-history .message:after {
   bottom: 100%;
   left: 7%;
