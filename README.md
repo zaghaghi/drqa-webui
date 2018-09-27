@@ -10,7 +10,7 @@ DrQA Web UI requires Linux/OSX and Python 3.5 or higher.
 1. Install DrQA
 2. Install dependencies (`pip install -r requirements`)
 3. Set `drqa_data_directory` in `services\__init__.py` to data directory of DrQA
-4. Run (`gunicorn --timeout 300 index:app)
+4. Run (`gunicorn --timeout 300 index:app`)
 5. Open [http://localhost:8000](http://localhost:8000)
 
 # Screens
