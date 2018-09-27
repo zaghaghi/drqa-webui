@@ -21,6 +21,7 @@ console.setFormatter(fmt)
 logger.addHandler(console)
 
 drqa_data_directory = '../DrQA/data'
+
 config = {
     'reader-model': os.path.join(drqa_data_directory, 'reader', 'multitask.mdl'),
     'retriever-model': os.path.join(drqa_data_directory, 'wikipedia', 'docs-tfidf-ngram=2-hash=16777216-tokenizer=simple.npz'),
