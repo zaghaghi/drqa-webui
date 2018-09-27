@@ -39,7 +39,7 @@ body {
 }
 .people-list ul {
   padding: 20px;
-  height: 594px;
+  /* height: 500px; */
 }
 .people-list ul li {
   padding-bottom: 20px;
@@ -58,6 +58,10 @@ body {
   color: #92959E;
 }
 
+.people-list .avatar {
+  width: 50px;
+  height: 50px;
+}
 .chat {
   width: 490px;
   float: left;
@@ -73,6 +77,12 @@ body {
 .chat .chat-header img {
   float: left;
 }
+
+.chat .chat-header .avatar {
+  width: 50px;
+  height: 50px;
+}
+
 .chat .chat-header .chat-about {
   float: left;
   padding-left: 10px;
