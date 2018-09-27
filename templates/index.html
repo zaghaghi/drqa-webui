@@ -6,7 +6,7 @@
   <title>DrQA</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
       </div>
       <ul class="list">
         <li class="clearfix">
-          <img src="images/wikipedia.png" class="avatar" alt="avatar" />
+          <img src="/static/images/wikipedia.png" class="avatar" alt="avatar" />
           <div class="about">
             <div class="name">Wikipedia (en)</div>
             <div class="status">
@@ -31,13 +31,13 @@
     
     <div class="chat">
       <div class="chat-header clearfix">
-        <img src="images/wikipedia.png" class="avatar" alt="avatar" />
+        <img src="/static/images/wikipedia.png" class="avatar" alt="avatar" />
         
         <div class="chat-about">
           <div class="chat-with">Ask questions from Wikipedia</div>
           <div class="chat-num-messages">language: english</div>
         </div>
-        <i class="fa fa-star"></i>
+        <!-- <i class="fa fa-star"></i> -->
       </div> <!-- end chat-header -->
       
       <div class="chat-history">
@@ -112,6 +112,7 @@
     
   </div> <!-- end container -->
 
+{% raw %}
 <script id="message-template" type="text/x-handlebars-template">
   <li class="clearfix">
     <div class="message-data align-right">
@@ -135,17 +136,11 @@
     </div>
   </li>
 </script>
+{% endraw %}
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js'></script>
-
-  
-
-    <script  src="js/index.js"></script>
-
-
-
-
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js'></script>
+  <script  src="/static/js/index.js"></script>
 </body>
 
 </html>
